@@ -1,0 +1,109 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  ul li {
+    list-style: none;
+  }
+  .container {
+    width: 700px;
+    height: 250px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    margin: 0 auto;
+    transform: translateY(100%);
+  }
+  .container .img {
+    position: relative;
+    height: 250px;
+  }
+  .container .img li {
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+  }
+  .container .img li img {
+    width: 100%;
+  }
+  .container .img li:nth-of-type(1) {
+    transform: translateX(230.3px) scale(0.8);
+    animation: three-D 12s ease 0s infinite;
+  }
+  .container .img li:nth-of-type(2) {
+    transform: translateX(98.7px) scale(1);
+    animation: three-Dmm 12s ease 0s infinite;
+  }
+  .container .img li:nth-of-type(3) {
+    transform: translateX(230.3px) scale(0.8);
+    animation: three-D 12s ease -3s infinite;
+  }
+  .container .img li:nth-of-type(4) {
+    transform: translateX(230.3px) scale(0.8);
+    animation: three-D 12s ease 3s infinite;
+  }
+  .container .img li:nth-of-type(5) {
+    transform: translateX(230.3px) scale(0.8);
+    animation: three-D 12s ease 6s infinite;
+  }
+  @keyframes three-D {
+    5%,
+    25% {
+      opacity: .8;
+      z-index: 1;
+      transform: translateX(230.3px) scale(0.8);
+    }
+    30%,
+    50% {
+      opacity: 1;
+      z-index: 2;
+      transform: translateX(98.7px) scale(1);
+    }
+    55%,
+    75% {
+      opacity: .8;
+      z-index: 1;
+      transform: translateX(-32.9px) scale(0.8);
+    }
+    76% {
+      opacity: 0;
+    }
+    77%,
+    100% {
+      opacity: 0;
+      transform: translateX(230.3px) scale(0.8);
+    }
+  }
+  @keyframes three-Dmm {
+    5%,
+    25% {
+      opacity: .8;
+      z-index: 1;
+      transform: translateX(-32.9px) scale(0.8);
+    }
+    26% {
+      opacity: 0;
+    }
+    27%,
+    50% {
+      opacity: 0;
+      transform: translateX(230.3px) scale(0.8);
+    }
+    55%,
+    75% {
+      opacity: .8;
+      z-index: 1;
+      transform: translateX(230.3px) scale(0.8);
+    }
+    80%,
+    100% {
+      opacity: 1;
+      z-index: 2;
+      transform: translateX(98.7px) scale(1);
+    }
+  }
